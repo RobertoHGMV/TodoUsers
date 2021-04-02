@@ -27,9 +27,10 @@ namespace TodoUsers.Domain.Models.Users
         public Login Login { get; private set; }
         public Email Email { get; private set; }
 
-        public void Update(Name name)
+        public void Update(Name name, Email email)
         {
             Name = name;
+            Email = email;
 
             Validate(this, new UserValidator());
         }
