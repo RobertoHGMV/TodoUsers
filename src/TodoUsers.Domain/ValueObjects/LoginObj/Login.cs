@@ -9,10 +9,7 @@
             UserName = userName.ToLower().Trim();
             Password = password.Trim();
             ConfirmPassword = confirmPassoword.Trim();
-            Validator = new LoginValidator();
         }
-
-        public LoginValidator Validator { get; set; }
 
         public string UserName { get; private set; }
         public string Password { get; private set; }

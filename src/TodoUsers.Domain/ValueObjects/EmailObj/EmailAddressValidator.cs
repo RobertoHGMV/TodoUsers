@@ -2,9 +2,9 @@
 
 namespace TodoUsers.Domain.ValueObjects.EmailObj
 {
-    public class EmailValidator : AbstractValidator<Email>
+    public class EmailAddressValidator : AbstractValidator<Email>
     {
-        public EmailValidator()
+        public EmailAddressValidator()
         {
             RuleFor(email => email.Address)
                 .NotNull().WithMessage("E-mail não informado")

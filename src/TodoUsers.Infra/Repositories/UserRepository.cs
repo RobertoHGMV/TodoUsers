@@ -35,7 +35,7 @@ namespace TodoUsers.Infra.Repositories
                 {
                     user = new User(name, login, email);
                     return user;
-                }, splitOn: "[FirstName], [UserName], [Address]").ToList();
+                }, splitOn: "FirstName, UserName, Address").ToList();
             }
 
             //return _context.Users.ToList();

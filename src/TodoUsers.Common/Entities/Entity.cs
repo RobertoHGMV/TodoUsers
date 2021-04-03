@@ -23,6 +23,7 @@ namespace TodoUsers.Common.Entities
             var result = validator.Validate(entity);
             _errors.Clear();
             _errors = result.Errors;
+            Valid = result.IsValid;
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TodoUsers.Api.Rest.Controllers
         }
 
         [HttpPost, Route("v1/[controller]")]
-        public IActionResult Add(AddUserInput user)
+        public IActionResult Add([FromBody] AddUserInput user)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace TodoUsers.Api.Rest.Controllers
         }
 
         [HttpPut, Route("v1/[controller]")]
-        public IActionResult Update(UpdateUserInput user)
+        public IActionResult Update([FromBody] UpdateUserInput user)
         {
             try
             {

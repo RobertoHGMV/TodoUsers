@@ -15,7 +15,7 @@ namespace TodoUsers.FluentMigrations.DbMigrations.Migrations
                 .WithColumn("LastName").AsString(60).Nullable()
                 .WithColumn("UserName").AsString(20).Nullable()
                 .WithColumn("Password").AsString(32).Nullable()
-                .WithColumn("Email").AsString(160).Nullable();
+                .WithColumn("Address").AsString(160).Nullable();
         }
     }
 }

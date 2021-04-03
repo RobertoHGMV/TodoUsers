@@ -23,8 +23,10 @@ namespace TodoUsers.Infra.Mappings
                 x.Ignore(l => l.ConfirmPassword);
             });
 
-            builder.OwnsOne(c => c.Email).Property(e => e.Address).HasMaxLength(160).HasColumnName("Email");
+            builder.OwnsOne(c => c.Email).Property(e => e.Address).HasMaxLength(160).HasColumnName("Address");
+
             builder.Ignore(c => c.Valid);
+            builder.Ignore(c => c.Notifications);
         }
     }
 }

@@ -8,10 +8,7 @@
         {
             FirstName = firstName;
             LastName = lastName;
-            Validator = new NameValidator();
         }
-
-        public NameValidator Validator { get; set; }
 
         public string FirstName { get; private set; }
         public string LastName { get; private set; }

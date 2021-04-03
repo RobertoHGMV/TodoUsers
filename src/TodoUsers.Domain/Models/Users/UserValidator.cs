@@ -1,4 +1,8 @@
 ﻿using FluentValidation;
+using FluentValidation.Validators;
+using TodoUsers.Domain.ValueObjects.EmailObj;
+using TodoUsers.Domain.ValueObjects.LoginObj;
+using TodoUsers.Domain.ValueObjects.NameObj;
 
 namespace TodoUsers.Domain.Models.Users
 {
@@ -6,9 +10,9 @@ namespace TodoUsers.Domain.Models.Users
     {
         public UserValidator()
         {
-            RuleFor(user => user.Name).SetValidator(c => c.Name.Validator);
-            RuleFor(user => user.Email).SetValidator(c => c.Email.Validator);
-            RuleFor(user => user.Login).SetValidator(c => c.Login.Validator);
+            RuleFor(user => user.Name).SetValidator(c => new NameValidator());
+            RuleFor(user => user.Email).SetValidator(c => new EmailAddressValidator());
+            RuleFor(user => user.Login).SetValidator(c => new LoginValidator());
         }
     }
 }

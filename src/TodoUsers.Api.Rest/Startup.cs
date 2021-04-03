@@ -25,6 +25,7 @@ namespace TodoUsers.Api.Rest
         {
             services.AddResponseCompression();
             services.AddControllers()
+                .AddNewtonsoftJson()
                 .AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null)
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
 
