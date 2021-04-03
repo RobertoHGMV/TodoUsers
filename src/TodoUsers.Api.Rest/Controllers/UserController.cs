@@ -6,6 +6,8 @@ using TodoUsers.Domain.Services;
 
 namespace TodoUsers.Api.Rest.Controllers
 {
+    [Route("api")]
+    [ApiController]
     public class UserController : Controller
     {
         IUserService _service;
