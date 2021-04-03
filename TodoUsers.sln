@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.Business", "src\TodoUsers.Business\TodoUsers.Business.csproj", "{46A2C082-E01B-4F2A-99F4-F4716DF7CDD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.Business", "src\TodoUsers.Business\TodoUsers.Business.csproj", "{46A2C082-E01B-4F2A-99F4-F4716DF7CDD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.Domain", "src\TodoUsers.Domain\TodoUsers.Domain.csproj", "{C7BE54AF-C690-4CF2-83DB-F4EEC4A102D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.Domain", "src\TodoUsers.Domain\TodoUsers.Domain.csproj", "{C7BE54AF-C690-4CF2-83DB-F4EEC4A102D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.Common", "src\TodoUsers.Common\TodoUsers.Common.csproj", "{3AA9A382-5532-46E4-B64E-1034F9A31EA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.Common", "src\TodoUsers.Common\TodoUsers.Common.csproj", "{3AA9A382-5532-46E4-B64E-1034F9A31EA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.DependencyInjection", "src\TodoUsers.DependencyInjection\TodoUsers.DependencyInjection.csproj", "{C5C60AB0-90B2-476D-B809-AD54A45EDAC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.DependencyInjection", "src\TodoUsers.DependencyInjection\TodoUsers.DependencyInjection.csproj", "{C5C60AB0-90B2-476D-B809-AD54A45EDAC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.FluentMigrations", "src\TodoUsers.FluentMigrations\TodoUsers.FluentMigrations.csproj", "{AA2389E5-FD7B-433C-8D97-53681986E534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.FluentMigrations", "src\TodoUsers.FluentMigrations\TodoUsers.FluentMigrations.csproj", "{AA2389E5-FD7B-433C-8D97-53681986E534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.Infra", "src\TodoUsers.Infra\TodoUsers.Infra.csproj", "{C50BA867-85DF-4331-9C39-E89FBF60178B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.Infra", "src\TodoUsers.Infra\TodoUsers.Infra.csproj", "{C50BA867-85DF-4331-9C39-E89FBF60178B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.Api.Rest", "src\TodoUsers.Api.Rest\TodoUsers.Api.Rest.csproj", "{9631656D-D3AC-41A5-87C9-76A03DE633CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{C50BA867-85DF-4331-9C39-E89FBF60178B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C50BA867-85DF-4331-9C39-E89FBF60178B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C50BA867-85DF-4331-9C39-E89FBF60178B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9631656D-D3AC-41A5-87C9-76A03DE633CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9631656D-D3AC-41A5-87C9-76A03DE633CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9631656D-D3AC-41A5-87C9-76A03DE633CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9631656D-D3AC-41A5-87C9-76A03DE633CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
