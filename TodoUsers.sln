@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.FluentMigrations"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.Infra", "src\TodoUsers.Infra\TodoUsers.Infra.csproj", "{C50BA867-85DF-4331-9C39-E89FBF60178B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.Api.Rest", "src\TodoUsers.Api.Rest\TodoUsers.Api.Rest.csproj", "{9631656D-D3AC-41A5-87C9-76A03DE633CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoUsers.Api.Rest", "src\TodoUsers.Api.Rest\TodoUsers.Api.Rest.csproj", "{9631656D-D3AC-41A5-87C9-76A03DE633CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoUsers.Tests", "src\TodoUsers.Tests\TodoUsers.Tests.csproj", "{B2BAC7FE-96FF-4617-84EA-07D6A7997B5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{9631656D-D3AC-41A5-87C9-76A03DE633CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9631656D-D3AC-41A5-87C9-76A03DE633CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9631656D-D3AC-41A5-87C9-76A03DE633CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2BAC7FE-96FF-4617-84EA-07D6A7997B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2BAC7FE-96FF-4617-84EA-07D6A7997B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2BAC7FE-96FF-4617-84EA-07D6A7997B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2BAC7FE-96FF-4617-84EA-07D6A7997B5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

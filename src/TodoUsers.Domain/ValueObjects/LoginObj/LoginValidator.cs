@@ -7,7 +7,7 @@ namespace TodoUsers.Domain.ValueObjects.LoginObj
         public LoginValidator()
         {
             RuleFor(login => login.UserName)
-                .NotNull().WithMessage("Nome não informado")
+                .NotNull().WithMessage("Nome de usuário não informado")
                 .Length(3, 20).WithMessage("Nome de usuário deve ter de 3 a 20 caracteres.");
 
             RuleFor(login => login.Password)

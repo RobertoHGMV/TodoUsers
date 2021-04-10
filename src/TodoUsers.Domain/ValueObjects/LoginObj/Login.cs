@@ -6,9 +6,9 @@
 
         public Login(string userName, string password, string confirmPassoword)
         {
-            UserName = userName.ToLower().Trim();
-            Password = password.Trim();
-            ConfirmPassword = confirmPassoword.Trim();
+            UserName = userName?.ToLower().Trim() ?? string.Empty;
+            Password = password?.Trim() ?? string.Empty;
+            ConfirmPassword = confirmPassoword?.Trim() ?? string.Empty;
         }
 
         public string UserName { get; private set; }

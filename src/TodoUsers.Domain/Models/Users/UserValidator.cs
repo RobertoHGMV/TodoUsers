@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using FluentValidation.Validators;
 using TodoUsers.Domain.ValueObjects.EmailObj;
 using TodoUsers.Domain.ValueObjects.LoginObj;
 using TodoUsers.Domain.ValueObjects.NameObj;

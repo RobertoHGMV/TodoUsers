@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using TodoUsers.Common.Entities;
 using TodoUsers.Domain.ValueObjects.EmailObj;
 using TodoUsers.Domain.ValueObjects.LoginObj;
