@@ -10,6 +10,6 @@ namespace TodoUsers.Domain.Services
         User GetByUserName(string userName);
         User Add(AddUserInput userInput);
         User Update(UpdateUserInput userInput);
-        void Remove(string userName);
+        User Remove(string userName);
     }
 }

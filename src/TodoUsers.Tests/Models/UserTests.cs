@@ -28,10 +28,11 @@ namespace TodoUsers.Tests.Models
         [TestCase("ab", "Vettel")]
         public void DadoPrimeiroNomeInvalidoEntidadeDeveRetornarFalso(string nome, string sobrenome)
         {
-            var name = new Name(nome, sobrenome);
-            var user = new User(name, _loginValid, _emailValid);
+            var sut = new Name(nome, sobrenome);
 
-            Assert.IsFalse(user.Valid);
+            var result = new User(sut, _loginValid, _emailValid).Valid;
+
+            Assert.IsFalse(result);
         }
 
         [Test]
@@ -39,10 +40,11 @@ namespace TodoUsers.Tests.Models
         [TestCase("Sebastian", "ab")]
         public void DadoSobrenomeInvalidoEntidadeDeveRetornarFalso(string nome, string sobrenome)
         {
-            var name = new Name(nome, sobrenome);
-            var user = new User(name, _loginValid, _emailValid);
+            var sut = new Name(nome, sobrenome);
 
-            Assert.IsFalse(user.Valid);
+            var result = new User(sut, _loginValid, _emailValid).Valid;
+
+            Assert.IsFalse(result);
         }
 
         [Test]
@@ -54,10 +56,11 @@ namespace TodoUsers.Tests.Models
         [TestCase("vet", "123456", "12345")]
         public void DadoLoginInvalidoEntidadeDeveRetornarFalso(string usuario, string senha, string confirmacaoDeSenha)
         {
-            var login = new Login(usuario, senha, confirmacaoDeSenha);
-            var user = new User(_nameValid, login, _emailValid);
+            var sut = new Login(usuario, senha, confirmacaoDeSenha);
 
-            Assert.IsFalse(user.Valid);
+            var result = new User(_nameValid, sut, _emailValid).Valid;
+
+            Assert.IsFalse(result);
         }
 
         [Test]
@@ -65,18 +68,19 @@ namespace TodoUsers.Tests.Models
         [TestCase("abcd")]
         public void DadoEmailInvalidoEntidadeDeveRetornarFalso(string enderecoDeEmail)
         {
-            var email = new Email(enderecoDeEmail);
-            var user = new User(_nameValid, _loginValid, email);
+            var sut = new Email(enderecoDeEmail);
 
-            Assert.IsFalse(user.Valid);
+            var result = new User(_nameValid, _loginValid, sut).Valid;
+
+            Assert.IsFalse(result);
         }
 
         [Test]
         public void DadoUsuarioValidoEntidadeDeveRetornarVerdadeiro()
         {
-            var user = new User(_nameValid, _loginValid, _emailValid);
+            var sut = new User(_nameValid, _loginValid, _emailValid);
 
-            Assert.IsTrue(user.Valid);
+            Assert.IsTrue(sut.Valid);
         }
 
         [Test]
@@ -84,8 +88,8 @@ namespace TodoUsers.Tests.Models
         [TestCase("ab", "Vettel")]
         public void DadoPrimeiroNomeInvalidoEntidadeDeveRetornarFalsoAoAtualizar(string nome, string sobrenome)
         {
-            var name = new Name(nome, sobrenome);
-            _userValid.Update(name, _emailValid);
+            var sut = new Name(nome, sobrenome);
+            _userValid.Update(sut, _emailValid);
 
             Assert.IsFalse(_userValid.Valid);
         }
@@ -95,8 +99,8 @@ namespace TodoUsers.Tests.Models
         [TestCase("Sebastian", "ab")]
         public void DadoSobrenomeInvalidoEntidadeDeveRetornarFalsoAoAtualizar(string nome, string sobrenome)
         {
-            var name = new Name(nome, sobrenome);
-            _userValid.Update(name, _emailValid);
+            var sut = new Name(nome, sobrenome);
+            _userValid.Update(sut, _emailValid);
 
             Assert.IsFalse(_userValid.Valid);
         }
@@ -106,8 +110,8 @@ namespace TodoUsers.Tests.Models
         [TestCase("abcd")]
         public void DadoEmailInvalidoEntidadeDeveRetornarFalsoAoAtualizar(string enderecoDeEmail)
         {
-            var email = new Email(enderecoDeEmail);
-            _userValid.Update(_nameValid, email);
+            var sut = new Email(enderecoDeEmail);
+            _userValid.Update(_nameValid, sut);
 
             Assert.IsFalse(_userValid.Valid);
         }

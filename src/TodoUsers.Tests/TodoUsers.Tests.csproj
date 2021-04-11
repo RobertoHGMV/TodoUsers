@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TodoUsers.Api.Rest\TodoUsers.Api.Rest.csproj" />
     <ProjectReference Include="..\TodoUsers.Business\TodoUsers.Business.csproj" />
     <ProjectReference Include="..\TodoUsers.Domain\TodoUsers.Domain.csproj" />
   </ItemGroup>

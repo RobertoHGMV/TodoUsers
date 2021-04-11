@@ -51,18 +51,23 @@ namespace TodoUsers.Business.UserServices
             var name = new Name(userInput.FirstName, userInput.LastName);
             var email = new Email(userInput.Email);
 
-            if (user.Invalid) return user;
+            if (user is null || user.Invalid) return user;
 
             user.Update(name, email);
             _uow.Commit();
             return user;
         }
 
-        public void Remove(string userName)
+        public User Remove(string userName)
         {
             var user = GetByUserName(userName);
+
+            if (user is null) return user;
+
             _respository.Remove(user);
             _uow.Commit();
+
+            return user;
         }
     }
 }

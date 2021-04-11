@@ -38,7 +38,7 @@ namespace TodoUsers.Api.Rest.Controllers
                 var user = _service.GetByUserName(userName);
 
                 if (user is null)
-                    return NotFound(new ResultViewModel { Success = false, Message = $"Usuário [{userName}] não encontrado", Docs = { } });
+                    return UserNotFound(userName);
 
                 return Ok(new ResultViewModel { Success = true, Docs = user });
             }
@@ -73,6 +73,9 @@ namespace TodoUsers.Api.Rest.Controllers
             {
                 var userUpdate = _service.Update(user);
 
+                if (userUpdate is null)
+                    return UserNotFound(user.UserName);
+
                 if (userUpdate.Invalid)
                     return BadRequest(new ResultViewModel { Success = false, Docs = userUpdate.Notifications });
 
@@ -89,13 +92,22 @@ namespace TodoUsers.Api.Rest.Controllers
         {
             try
             {
-                _service.Remove(userName);
+                var user = _service.Remove(userName);
+
+                if (user is null)
+                    return UserNotFound(userName);
+
                 return NoContent();
             }
             catch (Exception ex)
             {
                 return BadRequest(new ResultViewModel { Success = false, Message = ex.Message, Docs = ex });
             }
+        }
+
+        private IActionResult UserNotFound(string userName)
+        {
+            return NotFound(new ResultViewModel { Success = false, Message = $"Usuário [{userName}] não encontrado", Docs = { } });
         }
     }
 }
