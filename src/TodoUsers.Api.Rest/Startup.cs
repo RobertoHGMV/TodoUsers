@@ -42,10 +42,20 @@ namespace TodoUsers.Api.Rest
 
             app.UseResponseCompression();
             app.UseHttpsRedirection();
-            EnableDocumentation(app);
+            
             app.UseRouting();
+            app.UseCors(x => 
+            x.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+            
+            EnableDocumentation(app);
+
+            //app.UseAuthentication();
             //app.UseAuthorization();
+
             app.UseEndpoints(endpoints => endpoints.MapControllers());
+
             migrationRunner.MigrateUp();
         }
 

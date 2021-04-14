@@ -13,17 +13,17 @@ namespace TodoUsers.Infra.Mappings
 
             builder.OwnsOne(c => c.Name, x => 
             {
-                x.Property(l => l.FirstName).HasMaxLength(60).HasColumnName("FirstName");
-                x.Property(l => l.LastName).HasMaxLength(60).HasColumnName("LastName");
+                x.Property(l => l.FirstName).HasMaxLength(60).HasColumnType("nvarchar(60)").HasColumnName("FirstName");
+                x.Property(l => l.LastName).HasMaxLength(60).HasColumnType("nvarchar(60)").HasColumnName("LastName");
             });
             builder.OwnsOne(c => c.Login, x =>
             {
-                x.Property(l => l.UserName).HasMaxLength(20).HasColumnName("UserName");
-                x.Property(l => l.Password).HasMaxLength(32).IsFixedLength().HasColumnName("Password");
+                x.Property(l => l.UserName).HasMaxLength(20).HasColumnType("nvarchar(20)").HasColumnName("UserName");
+                x.Property(l => l.Password).HasMaxLength(32).HasColumnType("nvarchar(32)").IsFixedLength().HasColumnName("Password");
                 x.Ignore(l => l.ConfirmPassword);
             });
 
-            builder.OwnsOne(c => c.Email).Property(e => e.Address).HasMaxLength(160).HasColumnName("Address");
+            builder.OwnsOne(c => c.Email).Property(e => e.Address).HasMaxLength(160).HasColumnType("nvarchar(160)").HasColumnName("Address");
 
             builder.Ignore(c => c.Valid);
             builder.Ignore(c => c.Notifications);
