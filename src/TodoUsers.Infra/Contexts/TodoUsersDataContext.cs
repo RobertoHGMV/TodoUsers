@@ -10,13 +10,16 @@ namespace TodoUsers.Infra.Contexts
 {
     public class TodoUsersDataContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
+            {
+                //optionsBuilder.UseInMemoryDatabase("Database");
                 optionsBuilder.UseSqlServer(Runtime.ConnectionStringSqlServer);
+            }
         }
+
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

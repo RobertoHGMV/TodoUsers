@@ -32,7 +32,8 @@ namespace TodoUsers.Api.Rest
             AddDocumentation(services);
             ResolveDependency(services);
             ConfigureFluentMigrator(services);
-            Runtime.ConnectionStringSqlServer = Configuration["ConnStrSqlServer"];
+            Runtime.ConnectionStringSqlServer = Configuration.GetConnectionString("connectionString");
+            //Runtime.ConnectionStringSqlServer = Configuration["ConnStrSqlServer"];
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IMigrationRunner migrationRunner)
